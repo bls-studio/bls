@@ -7,6 +7,6 @@ const PORT = 3000;
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, './public/dist')));
+app.use(express.static(path.join(__dirname, '../public/dist')));
 
 app.listen(PORT, () => console.log(`Connected to BLS Server ${PORT}`))
