@@ -1,9 +1,16 @@
 @import '../App/global.scss';
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  // height: 100%;
+}
 .navbar__container {
   width: 80%;
   margin: 2em auto;
   display: flex;
+  // background: #eeeeee;
 }
 .navbar__items {
   display: flex;
@@ -11,12 +18,19 @@
   justify-content: flex-end;
   align-items: center;
   font-family: $montserrat;
-  color: $indigo;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 21px;
   
   li {
+    color: $indigo;
     margin: 0 1em;
+    cursor: pointer;
+    transition: .2s ease-in;
+  }
+  li:hover {
+    color: $green;
+    // border-bottom: 2px solid $indigo;
+    // width: 100%;
   }
 }

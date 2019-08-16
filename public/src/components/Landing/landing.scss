@@ -1,0 +1,47 @@
+@import '../App/global.scss';
+
+.landing {
+  width: 100%;
+  background: #EEEEEE;
+}
+.landing__container {
+  // height: 1080px;
+  padding: 120px 0;
+  border-bottom: 2px solid red;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+.landing__headline {
+  padding: 6% 0;
+  color: $indigo;
+  font-family: $montserrat;
+  text-align: center;
+
+  &--major {
+    font-size: 48px;
+    font-weight: 500;
+  }
+  &--minor {
+    padding-top: 1em;
+    font-size: 29px;
+  }
+}
+.landing__background {
+  position: absolute;
+  z-index: -1;
+  bottom: -120px;
+  right: -130px;
+}
+.landing__image {
+  // padding: 10% 0;
+}
+.landing__wheel {
+  margin-top: 2%;
+}
+.splash {
+  height: 100vh;
+  background: white;
+}
