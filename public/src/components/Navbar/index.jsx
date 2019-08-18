@@ -9,17 +9,19 @@ export default class Navbar extends Component {
 
     this.state = {
       header: {
-        background: "none"
+        width: "100%"
       },
+      offset: 0,
     }
     // this.listenScrollEvent = this.listenScrollEvent.bind(this);
   }
   // listenScrollEvent(e) {
-  //   if (window.scrollY > 900) {
-  //     this.setState({header: {background:'#1D325A', boxShadow: "0 0 3px rgba(0,0,0,.15)", transition: ".1s ease-in"}}
+  //   // this.setState({ offset: window.scrollY })
+  //   if (window.scrollY > 300) {
+  //     this.setState({header: {transition: ".3s ease-in", width: "0"}}
   //     , console.log(window.pageYOffset))
   //   } else {
-  //     this.setState({header: {background: 'none', boxShadow: "none", transition: ".1s ease-in"}})
+  //     this.setState({header: {transition: ".3s ease-in", width: "100%"}})
   //   }
   // }
   // componentDidMount() {
@@ -27,15 +29,20 @@ export default class Navbar extends Component {
   // }
   render() {
     return(
-      <div className="navbar" >
+      <div className="navbar">
         <div className="navbar__container">
           <Logo />
-          <ul className="navbar__items">
-            <li>About</li>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Contact</li>
-          </ul>
+          <div className="navbar__menu">
+            <input type="checkbox" className="toggler"/>
+            <div className="hamburger"><div></div></div>
+            {/* <ul className="navbar__items" style={this.state.header}>
+              <li>About</li>
+              <li>Services</li>
+              <li>Works</li>
+              <li>Contact</li>
+            </ul> */}
+
+          </div>
         </div>
       </div>
     )

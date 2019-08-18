@@ -36,11 +36,14 @@ export default class Landing extends Component {
               <h3 className="landing__headline--minor">Connecting through design, code, & innovation.</h3>
             </div>
             <div className="landing__image">
-              <img src={iLeft} className="landing__image--left" alt="" style={{top: -this.state.offset / 10}}/>
-              <img src={iRight} className="landing__image--right" alt="" style={{top: this.state.offset / 10}}/>
+              <img src={iLeft} className="landing__image--left" alt="" style={{top: -this.state.offset / 20}}/>
+              <img src={iRight} className="landing__image--right" alt="" style={{top: this.state.offset / 20}}/>
             </div>
           </div>
-          <img src={Wheel} alt="" className="landing__wheel"/>
+          <div className="mouse">
+            
+          </div>
+          {/* <img src={Wheel} alt="" className="landing__wheel"/> */}
         </div>
       </div>
     )
