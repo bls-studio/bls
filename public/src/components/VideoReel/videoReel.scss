@@ -1,0 +1,33 @@
+@import '../App/global.scss';
+
+.splash {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 140px 0;
+}
+.splash__header {
+  width: 80%;
+  margin: 0 auto;
+  color: #48495A;
+  display: flex;
+  font-family: $montserrat;
+
+  &--left {
+    font-size: 30px;
+    width: calc(50%-5%);
+    margin-left: 5%;
+  }
+  &--right {
+    font-size: 50px;
+    font-weight: 800;
+    width: calc(50% - 10%);
+    margin-left: 10%;
+  }
+}
+.splash__placeholderImage {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
