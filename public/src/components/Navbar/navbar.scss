@@ -7,7 +7,7 @@
   // height: 100%;
 }
 .navbar__container {
-  width: 80%;
+  width: calc(100% - 240px);
   margin: 2em auto;
   display: flex;
   // background: #eeeeee;
@@ -23,7 +23,7 @@
   font-size: 21px;
   
   li {
-    color: $indigo;
+    color: $white;
     margin: 0 1em;
     cursor: pointer;
     transition: .2s ease-in;
