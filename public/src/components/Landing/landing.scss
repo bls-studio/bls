@@ -1,6 +1,8 @@
 @import '../App/global.scss';
 
-
+.navbar__menu .hamburger > div {
+  background: colorSwap($black)
+}
 .landing {
   background: rgb(6,10,18);
 }

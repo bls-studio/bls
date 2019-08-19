@@ -13,35 +13,38 @@ export default class Navbar extends Component {
       },
       offset: 0,
     }
-    // this.listenScrollEvent = this.listenScrollEvent.bind(this);
+    this.listenScrollEvent = this.listenScrollEvent.bind(this);
   }
-  // listenScrollEvent(e) {
-  //   // this.setState({ offset: window.scrollY })
-  //   if (window.scrollY > 300) {
-  //     this.setState({header: {transition: ".3s ease-in", width: "0"}}
-  //     , console.log(window.pageYOffset))
-  //   } else {
-  //     this.setState({header: {transition: ".3s ease-in", width: "100%"}})
-  //   }
-  // }
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.listenScrollEvent)
-  // }
+  listenScrollEvent(e) {
+    this.setState({ offset: window.scrollY })
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
   render() {
     return(
-      <div className="navbar">
+      <div className="navbar" >
         <div className="navbar__container">
-          <Logo />
-          <div className="navbar__menu">
+          <Logo className="navbar__logo"/>
+          <ul className="navbar__items" style={{left: this.state.offset, opacity: 50 / this.state.offset}}>
+            <li>About</li>
+            <li>Services</li>
+            <li>Works</li>
+            <li>Contact</li>
+          </ul>
+          <div className="navbar__menu" style={this.state.offset > 50 ? {opacity: "1"} : {opacity: "0"}}>
             <input type="checkbox" className="toggler"/>
             <div className="hamburger"><div></div></div>
-            {/* <ul className="navbar__items" style={this.state.header}>
-              <li>About</li>
-              <li>Services</li>
-              <li>Works</li>
-              <li>Contact</li>
-            </ul> */}
-
+            <div className="menu">
+              <div>
+                <ul>
+                  <li>About</li>
+                  <li>Services</li>
+                  <li>Works</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

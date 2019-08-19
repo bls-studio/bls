@@ -1,5 +1,9 @@
 @import '../App/global.scss';
 
+.navbar__menu .hamburger > div {
+  color: colorSwap($white)
+}
+
 .splash {
   background: white;
   display: flex;

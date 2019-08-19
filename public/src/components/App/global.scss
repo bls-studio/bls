@@ -13,7 +13,13 @@ $black: #060A12;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
 $montserrat:'Montserrat', sans-serif;
 
-// * {
-//   // outline: 2px solid red;
-// }
+// // Background Colors
+@function colorSwap($color) {
+  @if (lightness($color) > 60) {
+    @return $black; // Lighter background, return dark color
+  } @else {
+    @return $white; // Darker background, return light color
+  }
+}
 
+// $landing: 
