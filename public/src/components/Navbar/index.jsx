@@ -8,9 +8,6 @@ export default class Navbar extends Component {
     super();
 
     this.state = {
-      header: {
-        width: "100%"
-      },
       offset: 0,
     }
     this.listenScrollEvent = this.listenScrollEvent.bind(this);
@@ -20,6 +17,9 @@ export default class Navbar extends Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
+  }
+  menuToggle() {
+
   }
   render() {
     return(
@@ -33,9 +33,9 @@ export default class Navbar extends Component {
             <li>Contact</li>
           </ul>
           <div className="navbar__menu" style={this.state.offset > 50 ? {opacity: "1"} : {opacity: "0"}}>
-            <input type="checkbox" className="toggler"/>
+            <input type="checkbox" className="toggler" onChange={this.state.checked}/>
             <div className="hamburger"><div></div></div>
-            <div className="menu">
+            {/* <div className="menu">
               <div>
                 <ul>
                   <li>About</li>
@@ -44,7 +44,7 @@ export default class Navbar extends Component {
                   <li>Contact</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
