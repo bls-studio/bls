@@ -30,7 +30,8 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
 }
 svg {
   mix-blend-mode: difference;
-
+  width: 40px;
+  height: 40px;
 }
 .navbar__logo {
   filter: drop-shadow(2px 4px 2px grey)
@@ -77,7 +78,7 @@ svg {
 .navbar__menu .hamburger {
   outline: none;
   position: fixed;
-  top: 0;
+  top: -5px;
   right: 0;
   margin: 2em auto;
   z-index: 15;
