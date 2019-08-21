@@ -1,13 +1,30 @@
 @import '../App/global.scss';
-
-.navbar__menu .hamburger > div {
-  background: colorSwap($black)
+@keyframes mouse {
+  0% {
+    right: 180%;
+    width: 0px;
+  }
+  50% {
+    right: 115%;
+    width: 50px;
+  }
+  100% {
+    width: 0px;    
+    // height: 70px;
+  }
 }
+
+// .navbar__menu .hamburger > div {
+//   // background: $black;
+//   mix-blend-mode: difference;
+// }
 .landing {
   background: rgb(6,10,18);
+  // height: 100vh;
+  overflow: hidden;
 }
 .landing__overlay {
-  padding: 240px 0 120px;
+  padding: 140px 0 0;
   // height: calc(100vh - 240px);
   display: flex;
   flex-direction: column;
@@ -17,69 +34,91 @@
   position: relative;
 }
 .landing__container {
-  // height: 100%;
   margin: 0 auto;
-  width: calc(100% - 280px);
+  width: 80%;
   position: relative;
   z-index: 5;
   display: grid;
-  grid-template-columns: 1fr 20% 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "image"
+  "headline";
   align-content: center;
   justify-items: center;
 }
 .landing__headline {
-  align-self: center;
   position: relative;
   color: $white;
   font-family: $montserrat;
   line-height: 1.3;
+  grid-area: headline;
 
   &--major {
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 500;
   }
   &--minor {
     padding-top: 38px;
-    font-size: 25px;
+    font-size: 20px;
     color: rgba(247, 247, 257, .75);
   }
 }
 .landing__image {
+  grid-area: image;
+
   &--left, &--right {
     position: relative;
   }
 }
-// .landing__wheel {
-//   margin-top: 4%;
-//   position: relative;
-// }
 .mouse {
-  margin-top: 6%;
-  width: 31.147px;
-  height: 59.463px;
-  border: 3px solid $white;
-  border-radius: 60px;
-}
-.mouse::before {
-  content: '';
-  width: 5px;
-  height: 10px;
-  position: absolute;
-  background: #F7F7F7;
-  left: 50%;
-  top: 84%;
-  border-radius: 33%;
-  transform: translate(-50%);
-  animation: mouse 2s infinite;
-  opacity: 1;
-}
-@keyframes mouse {
-  from {
+  color: #F7F7F7;
+  mix-blend-mode: difference;
+  position: fixed;
+  right: -3%;
+  bottom: 10%;
+  text-transform: uppercase;
+  font: 500 12px "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  
+  .mouse__text {
+    transform: rotate(90deg);
+  }
+  .mouse__text:before {
+    content: '';
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    background: white;
+    animation: mouse 3s infinite cubic-bezier(1,.25,0,.75);
     opacity: 1;
-    top: 84%;
-  }
-  to {
-    opacity: 0;
-    top: 85%;
+    top: 45%;
+    right: 115%;
+
   }
 }
+@media only screen and (min-width: 1080px) {
+  .landing__overlay {
+    padding: 240px 0;
+  }  
+  .landing__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+      grid-template-areas: "headline image .";
+    width: calc(100% - 280px);
+  }
+  .landing__headline {
+    align-self: center;
+    &--major {
+      font-size: 55px;
+    }
+    &--minor {
+      font-size: 20px;
+    }
+  }
+  .mouse {
+    right: 5%;
+    bottom: 10%;
+  }
+
+}
+

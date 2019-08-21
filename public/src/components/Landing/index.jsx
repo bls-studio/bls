@@ -26,10 +26,11 @@ export default class Landing extends Component {
   // style={{background: `rgba(0, 0, 0, .20`}}
   // ${100 / this.state.offset})`
   // " style={{background: `rgba(0, 0, 0, ${this.state.offset/ 1000})`}
+  // style={{opacity: 200 / this.state.offset}}
   render() {
     return(
       <div className="landing">
-        <div className="landing__overlay" style={{opacity: 200 / this.state.offset}}>
+        <div className="landing__overlay">
           <div className="landing__container">
             <div className="landing__headline" style={{bottom: - this.state.offset / 5}}>
               <h1 className="landing__headline--major">An independent web design studio.</h1>
@@ -41,7 +42,7 @@ export default class Landing extends Component {
             </div>
           </div>
           <div className="mouse">
-            
+            <div className="mouse__text">scroll</div>
           </div>
           {/* <img src={Wheel} alt="" className="landing__wheel"/> */}
         </div>
