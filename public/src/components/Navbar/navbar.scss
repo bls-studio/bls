@@ -49,7 +49,8 @@ svg {
   
   
   li {
-    color: $white;
+    // mix-blend-mode: ;
+    color: $white !important;
     margin: 0 1em;
     cursor: pointer;
     transition: .2s ease-in;

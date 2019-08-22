@@ -41,7 +41,7 @@ export default class Navbar extends Component {
               <path id="Path_12" data-name="Path 12" d="M288,217.449l18.173-12.814Z" transform="translate(1 3.66)" fill="none" stroke="#F7F7F7" stroke-width="3"/>
             </g>
           </svg>
-          <ul className="navbar__items" style={{left: this.state.offset, opacity: 50 / this.state.offset}}>
+          <ul className="navbar__items" style={{bottom: this.state.offset, opacity: 50 / this.state.offset}}>
             <li>About</li>
             <li>Services</li>
             <li>Works</li>
