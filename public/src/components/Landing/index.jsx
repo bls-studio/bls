@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './landing.scss';
 
 // Assets
-import iLeft from '../../../dist/assets/left.png';
-import iRight from '../../../dist/assets/right.png';
 import shell from '../../../dist/assets/iPhone_X_Isometric_Landscape_Left.png';
 import holding from '../../../dist/assets/screen.png';
 import logo from '../../../dist/assets/logo.png';
@@ -19,9 +17,8 @@ const Landing = () =>  {
     return () => {
       window.removeEventListener('click', parallaxShift)
     }
-  }, [])
+  }, []);
   
-  console.log(offset)
   return(
     <div className="landing">
       <div className="landing__overlay">
