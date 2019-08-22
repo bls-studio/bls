@@ -33,6 +33,8 @@ svg {
   left: 0;
   width: 40px;
   height: 40px;
+  z-index: 15;
+  margin-left: 5%;
 }
 .navbar__items {
   visibility: hidden;
@@ -40,7 +42,6 @@ svg {
   width: 100%;
   justify-content: center;
   align-items: center;
-  // font-family: $montserrat;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 21px;
