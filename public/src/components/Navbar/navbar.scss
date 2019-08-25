@@ -21,8 +21,8 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
 .navbar__container {
   z-index: 10;
   position: fixed;
-  width:100%;
-  width: calc(90% - 2em);
+  // width:100%;
+  width: calc(100% - 72px);
   margin: 2em auto;
   display: flex;
   align-items: center;
@@ -34,7 +34,7 @@ svg {
   width: 40px;
   height: 40px;
   z-index: 15;
-  margin-left: 5%;
+  margin-left: 36px;
 }
 .navbar__items {
   visibility: hidden;
@@ -70,8 +70,11 @@ svg {
   z-index: 20;
   outline: none;
   position: fixed;
+  padding-right: 20px;
 }
 .hamburger {
+  padding-right: 20px;
+
   outline: none;
   position: fixed;
   top: -5px;
@@ -85,7 +88,7 @@ svg {
   justify-content: center;
   // background: $white;
   // background-blend-mode: difference;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   border-radius: 50%;
   isolation: isolate;
 }
@@ -93,7 +96,7 @@ svg {
   position: relative;
   width: 50%;
   height: 2px;
-  background: $grey;
+  background: $gold;
   display: flex;
   justify-content: flex-end;
   align-items: center;

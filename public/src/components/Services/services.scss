@@ -1,0 +1,37 @@
+@import '../App/global.scss';
+
+.services {
+  padding: 5vw 15vw;
+  background: #171616;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: $montserrat;
+  grid-gap: 8vw;
+}
+.service__container {
+  color: $offWhite;
+  padding: 64px 0;
+  max-width: 575px;
+
+  *{
+    margin: 13px 0;
+
+  }
+
+  .service__header {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .service__description {
+    margin: 1.5vw 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .service__items {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+}
