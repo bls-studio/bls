@@ -19,7 +19,7 @@ const Landing = () => {
 
   return(
     <div className="landing">
-      <svg id="elipse1" xmlns="http://www.w3.org/2000/svg" width="385" height="385" viewBox="0 0 385 385">
+      <svg id="ellipse1" xmlns="http://www.w3.org/2000/svg" width="385" height="385" viewBox="0 0 385 385">
         <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#c7a47a" stroke-width="8">
           <circle cx="192.5" cy="192.5" r="192.5" stroke="none"/>
           <circle cx="192.5" cy="192.5" r="188.5" fill="none"/>
@@ -30,6 +30,12 @@ const Landing = () => {
         <h3 className="landing__headline--minor">An creative web development studio.</h3>
         <button className="landing__cta">Let's talk</button>
       </div>
+      <svg id="ellipse2" xmlns="http://www.w3.org/2000/svg" width="385" height="385" viewBox="0 0 385 385">
+        <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#5f503e" stroke-width="8">
+          <circle cx="192.5" cy="192.5" r="192.5" stroke="none"/>
+          <circle cx="192.5" cy="192.5" r="188.5" fill="none"/>
+        </g>
+      </svg>
       <div className="landingImage__container">
         <img src={smilingMobile} alt="" className="smilingMobile"/>
       </div>

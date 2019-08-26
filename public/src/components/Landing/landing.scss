@@ -24,10 +24,13 @@
   width: 100%;
   overflow: hidden;
 }
+#elipse1 {
+  display: none;
+}
 .landing__headline {
   margin: 0 36px;
   position: relative;
-  color: $black;
+  color: $darkGrey;
   line-height: 1.3;
   padding: 0 36px 0 0;
   z-index: 0;
@@ -104,10 +107,16 @@
     padding: 0;
     align-items: center;
   }
-  #elipse1 {
+  #ellipse1 {
+    display: inline;
     position: absolute;
     top:-10%;
     left: -5%;
+  }
+  #ellipse2 {
+    position: absolute;
+    right: 16%;
+    top: 12%;  
   }
   
   .landing__headline {

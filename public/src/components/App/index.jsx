@@ -11,7 +11,7 @@ const App = () => (
     <Navbar />
     {/* <Menu /> */}
     <Landing />
-    <VideoReel />
+    {/* <VideoReel /> */}
     <Services />
   </div>
 );
