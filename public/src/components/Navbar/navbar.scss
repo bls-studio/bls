@@ -26,9 +26,9 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   margin: 2em auto;
   display: flex;
   align-items: center;
-  mix-blend-mode: difference;
+  // mix-blend-mode: exclusion;
 }
-svg {
+#palm__logo {
   top: -5px;
   left: 0;
   width: 40px;
@@ -50,6 +50,7 @@ svg {
   
   li {
     // mix-blend-mode: ;
+    opacity: 0;
     color: $white !important;
     margin: 0 1em;
     cursor: pointer;
@@ -144,7 +145,7 @@ svg {
   .navbar__menu .hamburger, .navbar__menu .toggler {
     margin: 2em 110px;
   }
-  svg {
+  #palm__logo {
     margin-left: 110px;
   }
 }

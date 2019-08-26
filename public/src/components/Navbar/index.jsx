@@ -3,7 +3,7 @@ import './navbar.scss';
 import Menu from '../OverlayMenu';
 
 // Assets
-const sgv = <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="46.201" height="52.915" viewBox="0 0 46.201 52.915">
+const sgv = <svg id="palm__logo" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="46.201" height="52.915" viewBox="0 0 46.201 52.915">
 <defs>
   <clipPath id="clip-path">
     <rect width="46.201" height="52.915" fill="none"/>
