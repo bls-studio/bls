@@ -89,7 +89,7 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   justify-content: center;
   // background: $white;
   // background-blend-mode: difference;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   border-radius: 50%;
   isolation: isolate;
 }
@@ -97,7 +97,7 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   position: relative;
   width: 50%;
   height: 2px;
-  background: $gold;
+  background: $white;
   display: flex;
   justify-content: flex-end;
   align-items: center;
