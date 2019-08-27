@@ -1,34 +1,51 @@
 @import '../App/global.scss';
 
 .about {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: $grey;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  display: grid;
+  grid-template-areas: ". desc ."
+  "leftText image rightText"
+  "about__service";
   padding: 10% 0;
+  font-family: $roboto;
+}
+.about__description {
+  font-size: 36px;
+  width: 650px;
+  grid-area: desc;
 }
 .about__header {
   width: 80%;
   margin: 0 auto;
   color: #48495A;
-  display: flex;
-  flex-direction: column;
-  font-family: $montserrat;
+  // display: flex;
+  // flex-direction: column;
+  // font-family: $montserrat;
 
   &--left {
+    grid-area: leftText;
     font-size: 17px;
     line-height: 1.3;
   }
   &--right {
+    grid-area: rightText;
     padding: 10% 0;
     font-size: 22px;
     font-weight: 800;
   }
 }
-.about__placeholderImage {
-  // padding-top: 100px;
-  width: 80%;
-  margin: 0 auto;
+.about__image {
+  grid-area: image;
+
+  &--left, &--right {
+    position: relative;
+  }
+}
+.about__service__container {
+  grid-area: about__service;
 }
 @media only screen and (min-width: 1080px) {
   .about {
