@@ -15,9 +15,10 @@
 }
 
 .landing {
-  font-family: $montserrat;
-  // background: #161D25;
-  background: url(../../../dist/assets/ascend--background--adjusted.png) 50% 50% no-repeat;
+  font-family: $roboto;
+  background: #161D25;
+  // background-image: url(../../../dist/assets/ascend--background--adjusted.png);
+  background-position:  50% 50%;
   background-size: cover;
   padding: 160px 0 0;
   display: flex;
@@ -44,7 +45,7 @@
   // margin: 0 36px 0 0;
   z-index: 2;
   // width: fit-content;
-  // mix-blend-mode: difference;
+  mix-blend-mode: lighten;
   
   * {
     margin: 13px 0;
@@ -55,6 +56,7 @@
   }
   &--minor {
     font-size: 20px;
+    font-weight: 400;
     opacity: .7;
   }
   .landing__cta {
@@ -135,6 +137,7 @@
 
     .parallax__image {
       left: 20%;
+      // bottom: 50%;
     }
   }
   .mouse {

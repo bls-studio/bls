@@ -1,17 +1,13 @@
 @import '../App/global.scss';
 
-.navbar__menu .hamburger > div {
-  color: colorSwap($white)
-}
-
-.splash {
+.about {
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10% 0;
 }
-.splash__header {
+.about__header {
   width: 80%;
   margin: 0 auto;
   color: #48495A;
@@ -29,16 +25,16 @@
     font-weight: 800;
   }
 }
-.splash__placeholderImage {
+.about__placeholderImage {
   // padding-top: 100px;
   width: 80%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1080px) {
-  .splash {
+  .about {
     padding: 140px 0;
   }
-  .splash__header {
+  .about__header {
     flex-direction: row;
     
     &--left {
@@ -53,7 +49,7 @@
       width: calc(50% - 10%);
     }
   }
-  .splash__placeholderImage {
+  .about__placeholderImage {
     padding-top: 100px;
   }
 }
