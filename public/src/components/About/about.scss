@@ -7,30 +7,20 @@
   align-items: center;
   padding: 10% 0;
   background: $grey;
+  font-family: $montserrat;
 }
 .about__container {
-  display: grid;
-  grid-template-areas: ". desc ."
-  "leftText image rightText";
-  grid-template-columns: 1fr 30% 1fr;
-  font-family: $roboto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  position: relative;
 }
 .about__description {
-  font-size: 36px;
-  width: 650px;
-  grid-area: desc;
-  // height: 100vh;
+  font-size: 16px;
 }
 .about__header {
-  // width: 80%;
   margin: 0 auto;
   color: #48495A;
-  // display: flex;
-  // flex-direction: column;
-  // font-family: $montserrat;
+
 
   &--left {
     grid-area: leftText;
@@ -39,7 +29,6 @@
   }
   &--right {
     grid-area: rightText;
-    // padding: 10% 0;
     font-size: 22px;
     font-weight: 800;
   }
@@ -54,12 +43,13 @@
 }
 .services {
   display: flex;
+  flex-direction: column;
   color: $black;
 }
 .service__container {
   grid-area: about__service;
   // color: $offWhite;
-  padding: 64px 0;
+  // padding: 64px 0;
   max-width: 500px;
   font-family: $montserrat;
   margin: 0 4%;
@@ -68,23 +58,26 @@
     margin: 13px 0;
 
   }
-
+  img {
+    width: 300px;
+  }
   .service__header {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
   .service__description {
     margin: 1.5vw 0 0;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 
   }
   .service__items {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 24px;
+    // margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    opacity: .8;
   }
 }
 
@@ -121,6 +114,21 @@
     padding: 140px 10%;
     width: 80%;
   }
+  .about__container {
+    display: grid;
+    grid-template-areas: ". desc ."
+    "leftText image rightText";
+    grid-template-columns: 1fr 30% 1fr;
+    font-family: $roboto;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+  .about__description {
+    font-size: 30px;
+    width: 650px;
+    grid-area: desc;
+  }
   .about__header {
     flex-direction: row;
     
@@ -132,12 +140,26 @@
       font-size: 50px;
     }
   }
-  .about__placeholderImage {
-    padding-top: 100px;
+
+  .services {
+    flex-direction: row;
   }
   .service__container {
+    padding: 64px 0;
+    max-width: 500px;
+
     img {
       width: 300px;
     }
+    .service__header {
+      font-size: 18px;
+    }
+    .service__description {
+      font-size: 16px;
+    }
+    .service__items {
+      font-size: 16px;
+    }
+ 
   }
 }

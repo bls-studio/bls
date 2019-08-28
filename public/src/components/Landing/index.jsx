@@ -31,7 +31,7 @@ const Landing = () => {
     .to(landingImage, .4, {y: -200, transition})
     .to(landingBackground, .2, {transform: "scale(1)", transition})
     .to(landingHeader, .5, {opacity: 1})
-    .to(landingImage, 20, {y: 0})
+    .to(landingImage, 1, {y: 0})
   })
   // useEffect(() => {
   //   TweenMax.to(
