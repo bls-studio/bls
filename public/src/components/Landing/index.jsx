@@ -28,10 +28,10 @@ const Landing = () => {
   useEffect(() => {
     tl
     // .set(landingImage, {y: 50})
-    .to(landingImage, .4, {y: -200, transition})
+    .to(landingImage, .4, {y: -300, transition})
     .to(landingBackground, .2, {transform: "scale(1)", transition})
     .to(landingHeader, .5, {opacity: 1})
-    .to(landingImage, 1, {y: 0})
+    .to(landingImage, 20, {y: 0})
   })
   // useEffect(() => {
   //   TweenMax.to(
@@ -58,11 +58,11 @@ const Landing = () => {
   //   )
   // })
 
-
+  // style={{bottom: offset / 4}}
   return(
     <div className="landing">
       <svg ref={element => landingBackground = element} className="landing__background" xmlns="http://www.w3.org/2000/svg"  width="1920" height="1080" viewBox="0 0 1920 1080">
-        <rect id="Rectangle_253" data-name="Rectangle 253" width="1920" height="1080" fill="#161d25"/>
+        <rect id="Rectangle_253" data-name="Rectangle 253" width="100vw" height="100vh" fill="#161d25"/>
       </svg>
       <div className="landing__overlay">
         <div className="landing__container">
@@ -72,7 +72,7 @@ const Landing = () => {
             <button className="landing__cta">Let's talk</button>
           </div>
           <div className="landing__image">
-            <img src={smilingMobile} alt="" className="parallax__image" style={{bottom: offset / 4}} ref={element => landingImage = element}/>
+            <img src={smilingMobile} alt="" className="parallax__image" ref={element => landingImage = element}/>
           </div>
         </div>
         <div className="mouse">
