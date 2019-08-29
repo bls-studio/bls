@@ -9,6 +9,8 @@
   background: $grey;
   font-family: $montserrat;
   color: #48495A;
+  position: relative;
+  z-index: 1;
 }
 .about__container {
   width: 90%;

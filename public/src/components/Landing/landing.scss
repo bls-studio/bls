@@ -18,8 +18,10 @@
   background-position:  50% 50%;
   background-size: cover;
   position: relative;
+  z-index: 1;
 }
 .landing__background {
+  z-index: 1;
   position: absolute;
   transform: scale(0);
   // left: 50%;
@@ -36,7 +38,6 @@
   align-items: center;
   justify-content: center;
   // position: relative;
-  z-index: 0;
   height: calc(100vh - 160px);
 }
 .landing__container {

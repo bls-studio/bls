@@ -1,16 +1,40 @@
-import React from'react';
+import React, { useRef, useState, useEffect } from'react';
 import './work.scss';
 
-import './animation'
+import anime from 'animejs';
+// import { useScrollState } from 'scrollmonitor-hooks';
+// import { getMousePos } from './animation'
 
 // Assets
 import yippido from '../../../dist/assets/yippido.png';
 import nishiSplash from '../../../dist/assets/nishiSplash.png';
 
-
 const Works = () => {
+  const [mousePos, setOffset] = useState({x: 0, y: 0});
+  let contentTitle = useRef(null), contentImg = useRef(null);
+  let mouse = useRef(null);
+
+
+  const _onMouseMove = (e) => {
+    const position = mouse.getBoundingClientRect();
+    
+    setOffset({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })
+    // console.log('hello', mouse)
+    console.log(position, mousePos);
+  }
+  
+  // useEffect((e) => {
+  //   getOffset({x: e.screenX, y: e.screenY})
+  //   console.log(mousePos)
+
+  // })
+  // const offSetHander = (e) => {
+  // }
+
+
+
   return(
-    <div className="works">
+    <div className="works" ref={element => mouse = element} onMouseMove={e => _onMouseMove(e)}>
       <div className="works__wrapper">
         <div class="morph-wrap">
           <svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
@@ -22,8 +46,8 @@ const Works = () => {
         </div>
         <div className="content-wrap">
           <div className="content content--layout content--layout-1">
-            <img className="content__img" src={yippido} alt="Some image" />
-            <h3 className="content__title">yippido</h3>
+            <img className="content__img" src={yippido} alt="Some image" ref={element => contentImg = element}/>
+            <h3 className="content__title" ref={element => contentTitle = element}>yippido</h3>
             <p className="content__author">Jane Westhall</p>
             <p className="content__desc">The neverending quest, once and forever.</p>
             <a href="#" class="content__link">Discover</a>
@@ -31,8 +55,8 @@ const Works = () => {
         </div>
         <div className="content-wrap">
           <div className="content content--layout content--layout-2">
-            <img className="content__img" src={nishiSplash} alt="Some image" />
-            <h3 className="content__title">nishi</h3>
+            <img className="content__img" src={nishiSplash} alt="Some image" ref={element => contentImg = element}/>
+            <h3 className="content__title" ref={element => contentTitle = element}>nishi</h3>
             <p className="content__author">Jane Westhall</p>
             <p className="content__desc">The neverending quest, once and forever.</p>
             <a href="#" class="content__link">Discover</a>

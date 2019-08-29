@@ -33,6 +33,9 @@ const Landing = () => {
     .to(landingHeader, .5, {opacity: 1})
     .to(landingImage, 20, {y: 0})
   })
+  const cta = () => {
+    console.log('clicked')
+  }
   // useEffect(() => {
   //   TweenMax.to(
   //     landingImage,
@@ -67,9 +70,9 @@ const Landing = () => {
       <div className="landing__overlay">
         <div className="landing__container">
           <div className="landing__headline" ref={element => landingHeader = element}>
-            <h1 className="landing__headline--major">A creative web development studio.</h1>
+            <h1 className="landing__headline--major" onClick={cta}>A creative web development studio.</h1>
             <h3 className="landing__headline--minor">Ascending through code, design, & innovation.</h3>
-            <button className="landing__cta">Let's talk</button>
+            <button className="landing__cta" onClick={cta}>Let's talk</button>
           </div>
           <div className="landing__image">
             <img src={smilingMobile} alt="" className="parallax__image" ref={element => landingImage = element}/>

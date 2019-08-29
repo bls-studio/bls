@@ -10,7 +10,7 @@
   position: relative;
   background: $black;
   color: $white;
-  z-index: -2;
+  z-index: 0;
 }
 // .works__wrapper {
 //   width: 220px;
@@ -30,7 +30,7 @@
 	align-items: center;
 	justify-content: center;
   pointer-events: none;
-  z-index: -1;
+  z-index: -10;
 }
 .morph {
 	position: relative;
@@ -41,6 +41,7 @@
 .content {
   position: relative;
   display: grid;
+  z-index: 0;
 }
 .content--fixed {
   position: fixed;
@@ -95,7 +96,7 @@
 	margin: 0;
 	text-transform: lowercase;
 	z-index: 10;
-  cursor: default;
+  cursor: pointer;
   font-weight: 600;
 }
 .content__author {

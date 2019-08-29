@@ -1054,6 +1054,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animejs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.1.0.tgz#748a90fc1d4bef3efed64508af9a6a82babf5c47"
+
 ansi-escapes@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.2.0.tgz#8780b98ff9dbf5638152d1f1fe5c1d7b4442976b"
@@ -4904,6 +4908,16 @@ scrollmagic-plugin-gsap@^1.0.3:
 scrollmagic@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.7.tgz#4139216f3849d226e38b3ef1e5dbbacf25190b35"
+
+scrollmonitor-hooks@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/scrollmonitor-hooks/-/scrollmonitor-hooks-1.0.1.tgz#0cd8fc5980aaa405c28fa11dac6227ca31d4bc2f"
+  dependencies:
+    scrollmonitor "^1.2.4"
+
+scrollmonitor@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/scrollmonitor/-/scrollmonitor-1.2.4.tgz#823d04cc1574aa3b71de7cc70ef91ebe633344a0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
