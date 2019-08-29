@@ -1,7 +1,7 @@
-import React, { useRef, useState, useEffect } from'react';
+import React, { useRef, useState, useEffect, createRef } from'react';
+import anime from 'animejs';
 import './work.scss';
 
-import anime from 'animejs';
 // import { useScrollState } from 'scrollmonitor-hooks';
 // import { getMousePos } from './animation'
 
@@ -13,28 +13,34 @@ const Works = () => {
   const [mousePos, setOffset] = useState({x: 0, y: 0});
   let contentTitle = useRef(null), contentImg = useRef(null);
   let mouse = useRef(null);
+  // let shift = useRef(null);
 
 
   const _onMouseMove = (e) => {
     const position = mouse.getBoundingClientRect();
     
     setOffset({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })
-    // console.log('hello', mouse)
-    console.log(position, mousePos);
+    // console.log(position, mousePos);
   }
+  const handleMouseMove = (e) => {
+    const img = contentImg.current, title = contentTitle.current;
+    const r = img.getBoundingClientRect(), l = title.getBoundingClientRect();;
+     img.style.setProperty('--x', e.clientX - (r.left + Math.floor(r.width / 2)))
+     img.style.setProperty('--y', e.clientY - (r.top + Math.floor(r.height / 2)))
+     title.style.setProperty('--x', e.clientX - (l.left + Math.floor(r.width / 2)))
+     title.style.setProperty('--y', e.clientY - (l.top + Math.floor(r.height / 2)))
+
+  }
+  const handleMouseLeave = (event) => {    
+    contentImg.current.style.setProperty('--x', 0)
+    contentImg.current.style.setProperty('--y', 0)
+    contentTitle.current.style.setProperty('--x', 0)
+    contentTitle.current.style.setProperty('--y', 0)
+  }
+ 
   
-  // useEffect((e) => {
-  //   getOffset({x: e.screenX, y: e.screenY})
-  //   console.log(mousePos)
-
-  // })
-  // const offSetHander = (e) => {
-  // }
-
-
-
   return(
-    <div className="works" ref={element => mouse = element} onMouseMove={e => _onMouseMove(e)}>
+    <div className="works" ref={element => mouse = element}>
       <div className="works__wrapper">
         <div class="morph-wrap">
           <svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
@@ -44,27 +50,42 @@ const Works = () => {
         <div className="content content--fixed">
           <h1 className="works_header">Works</h1>
         </div>
-        <div className="content-wrap">
+          {/* ref={shift}
+          onMouseMove={e => handleMouseMove(e)}
+          onMouseLeave={e => handleMouseLeave(e)} */}
+        <div className="content-wrap" 
+        >
           <div className="content content--layout content--layout-1">
-            <img className="content__img" src={yippido} alt="Some image" ref={element => contentImg = element}/>
-            <h3 className="content__title" ref={element => contentTitle = element}>yippido</h3>
+            <img className="content__img" src={yippido} alt="Some image" 
+            ref={contentImg}
+            onMouseMove={e => handleMouseMove(e)}
+            onMouseLeave={e => handleMouseLeave(e)}
+            />
+            {/* ref={shift}
+            onMouseMove={e => handleMouseMove(e)}
+            onMouseLeave={e => handleMouseLeave(e)} */}
+            <h3 className="content__title" ref={contentTitle}
+            onMouseMove={e => handleMouseMove(e)}
+            onMouseLeave={e => handleMouseLeave(e)}
+            >yippido</h3>
             <p className="content__author">Jane Westhall</p>
             <p className="content__desc">The neverending quest, once and forever.</p>
             <a href="#" class="content__link">Discover</a>
           </div>
         </div>
-        <div className="content-wrap">
+        <div className="content-wrap"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="content content--layout content--layout-2">
-            <img className="content__img" src={nishiSplash} alt="Some image" ref={element => contentImg = element}/>
-            <h3 className="content__title" ref={element => contentTitle = element}>nishi</h3>
+            <img className="content__img" src={nishiSplash} alt="Some image"/>
+            <h3 className="content__title">nishi</h3>
             <p className="content__author">Jane Westhall</p>
             <p className="content__desc">The neverending quest, once and forever.</p>
             <a href="#" class="content__link">Discover</a>
           </div>
         </div>
-
       </div>
-
     </div>
   )
 };
