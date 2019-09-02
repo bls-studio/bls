@@ -11,7 +11,11 @@ const Menu = (props) => {
   let dropdown = useRef(null);
 
   useEffect(() => {
-    TweenMax.to(dropdown, 1, {height: "100vh", ease: Power4.easeOut})    
+    console.log(!props.dropped, 'hello')
+    props.dropped ?
+    TweenMax.to(dropdown, 1, {y: "0%", ease: Power4.easeOut})    
+    :
+    TweenMax.to(dropdown, 1, {y: "-100%", ease: Power4.easeOut})    
   })
 
   return (

@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="navbar__menu">
         <input type="checkbox" className="toggler" onChange={_toggleCheckbox}/>
         <div className="hamburger"><div></div></div>
-        { checked ? <Menu dropped={checked} /> : null }
+        { checked ? <Menu dropped={checked} /> :  <Menu dropped={checked} />}
       </div>
     </div>
   )
