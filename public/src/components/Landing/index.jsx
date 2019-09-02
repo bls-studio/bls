@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {TweenMax, TimelineMax, Power0, Bounce} from 'gsap';
 
 import './newLanding.scss';
 
@@ -9,7 +8,6 @@ import mountains from '../../../dist/assets/mountains.png';
 
 const Landing = () => {
   const [offset, shiftOffset] = useState(0);
-  let tl = new TimelineMax();
   
   
   useEffect(() => {

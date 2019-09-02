@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, createRef, forwardRef } from'react';
+import React from'react';
 import anime from 'animejs';
 import './work.scss';
 import WorkItem from './workItem';
@@ -25,7 +25,7 @@ const WorkContents = [
     layout: "content--layout-1",
   }
 ]
-const Works = forwardRef((props, ref) => {
+const Works = () => {
   let refList = [];
 
   const handleMouseMove = (e) => {
@@ -71,25 +71,5 @@ const Works = forwardRef((props, ref) => {
       </div>
     </div>
   )
-});
+};
 export default Works;
-
-        // {/* <WorkItem 
-        //   image={yippido}
-        //   title={"yippido"}
-        //   mouseMove={handleMouseMove}
-        //   mouseLeave={handleMouseLeave}
-        //   image__xy={img1 => shiftItems.push(img1)}
-        //   title__xy={tit1 => shiftItems.push(tit1)}
-        // />
-        //   {/* title__xy={contentTitle} */}
-        // <WorkItem
-        //   image={nishiSplash}
-        //   title={"nishi"}
-        //   mouseMove={handleMouseMove}
-        //   mouseLeave={handleMouseLeave}
-        //   image__xy={img1 => shiftItems.push(img1)}
-        //   title__xy={tit1 => shiftItems.push(tit1)}
-        // />
-        //   {/* image__xy={img2 => shiftItems.push(img2)}
-        //   title__xy={tit2 => shiftItems.push(tit2)} */} */}
