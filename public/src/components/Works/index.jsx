@@ -14,13 +14,15 @@ const WorkContents = [
     title: "nishi",
     image: nishiSplash,
     titlePos: 'nishiTitPos',
-    imagePos: 'nishiImgPos'
+    imagePos: 'nishiImgPos',
+    layout: "content--layout-2",
   },
   {
     title: "yippido",
     image: yippido,
     titlePos: 'yipTitPos',
-    imagePos: 'yipImgPos'
+    imagePos: 'yipImgPos',
+    layout: "content--layout-1",
   }
 ]
 const Works = forwardRef((props, ref) => {
@@ -62,6 +64,7 @@ const Works = forwardRef((props, ref) => {
               mouseLeave={handleMouseLeave}
               title__xy={element => refList.push(element)}
               image__xy={element => refList.push(element)}
+              contentLayout={contents.layout}
             />
           })
         }
