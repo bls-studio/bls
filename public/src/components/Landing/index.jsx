@@ -1,20 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {TweenMax, TimelineMax, Power0, Bounce} from 'gsap';
 
-import './landing.scss';
+import './newLanding.scss';
 
 // Assets
-import smilingMobile from '../../../dist/assets/ascend--foreground--cropped.png';
+import mountains from '../../../dist/assets/mountains.png';
 
 
 const Landing = () => {
   const [offset, shiftOffset] = useState(0);
   let tl = new TimelineMax();
   
-  let landingImage = useRef(null);
-  let landingHeader = useRef(null);
-  let landingBackground = useRef(null);
-  let transition = `ease: "cubicBezier(1,.25,0,.75)"`
   
   useEffect(() => {
     const parallaxShift = () => shiftOffset(window.scrollY)
@@ -25,62 +21,28 @@ const Landing = () => {
     }
   }, []);
 
-  useEffect(() => {
-    tl
-    // .set(landingImage, {y: 50})
-    .to(landingImage, .4, {y: -300, transition})
-    .to(landingBackground, .2, {transform: "scale(1)", transition})
-    .to(landingHeader, .5, {opacity: 1})
-    .to(landingImage, 20, {y: 0})
-  })
-  const cta = () => {
-    console.log('clicked')
-  }
-  // useEffect(() => {
-  //   TweenMax.to(
-  //     landingImage,
-  //     4,
-  //     {y: "-100"}
-  //   )
-  // }, [])
-  // useEffect(() => {
-  //   TweenMax
-  //   // .set(landingBackground, {transform: "scale(0)"})
-  //   .to(
-  //     landingBackground,
-  //     1,
-  //     {transform: "scale(1)", ease: "cubicBezier(1,.25,0,.75)"}
-  //   )
-  // })
-  // useEffect(() => {
-  //   TweenMax
-  //   .to(
-  //     landingHeader,
-  //     1,
-  //     {opacity: "1", ease: "cubicBezier(1,.25,0,.75)"}
-  //   )
-  // })
 
-  // style={{bottom: offset / 4}}
+
   return(
     <div className="landing">
-      <svg ref={element => landingBackground = element} className="landing__background" xmlns="http://www.w3.org/2000/svg"  width="1920" height="1080" viewBox="0 0 1920 1080">
-        <rect id="Rectangle_253" data-name="Rectangle 253" width="100vw" height="100vh" fill="#161d25"/>
-      </svg>
-      <div className="landing__overlay">
-        <div className="landing__container">
-          <div className="landing__headline" ref={element => landingHeader = element}>
-            <h1 className="landing__headline--major" onClick={cta}>A creative web development studio.</h1>
-            <h3 className="landing__headline--minor">Ascending through code, design, & innovation.</h3>
-            <button className="landing__cta" onClick={cta}>Let's talk</button>
-          </div>
-          <div className="landing__image">
-            <img src={smilingMobile} alt="" className="parallax__image" ref={element => landingImage = element}/>
-          </div>
+      <div className="landing__image">
+        <img src={mountains} alt="" className="parallax__image"/>
+      </div>
+      <div className="landing__headline">
+        <div className="landing__headline--major">
+          <div className="A">A</div>
+          <div className="S" style={{ bottom: offset / 20 }}>S</div>
+          <div className="C">C</div>
+          <div className="E" style={{ bottom: offset / 20 }}>E</div>
+          <div className="N">N</div>
+          <div className="D" style={{ bottom: offset / 20 }}>D</div>
         </div>
-        <div className="mouse">
-          <div className="mouse__text">scroll</div>
+        <div className="landing__headline--minor">
+          <h3>A creative web development studio.</h3>
         </div>
+      </div>
+      <div className="mouse">
+        <div className="mouse__text">scroll</div>
       </div>
     </div>
   )

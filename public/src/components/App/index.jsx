@@ -11,9 +11,9 @@ import Services from '../Services';
 const App = () => (
   <div>
     <Navbar />
-    {/* <Landing />
-    <About /> */}
-    <Works />
+    <Landing />
+    <About />
+    {/* <Works /> */}
     {/* <Menu /> */}
     {/* <Services /> */}
   </div>

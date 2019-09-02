@@ -1,0 +1,132 @@
+@import '../App/global.scss';
+
+@keyframes mouse {
+  0% {
+    right: 180%;
+    width: 0px;
+  }
+  50% {
+    right: 115%;
+    width: 50px;
+  }
+  100% {
+    width: 0px;    
+  }
+}
+
+.landing {
+  width: 100%;
+  height: 100vh;
+  // position: relative;
+  background: #1d1d1d;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing__image {
+  transform: scale(.7);
+  position: absolute;
+  z-index: 0;
+}
+.landing__headline {
+  color: $white;
+  font-family: $montserrat;
+  // top: -50%;
+  &--major {
+    // width: 975px;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 90px;
+
+    * {
+      position: relative;
+    }
+  } 
+  &--minor {
+    padding-top: 3%;
+    font-weight: 400;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    opacity: .7;
+    // z-index: 1;
+  }
+}
+
+.mouse {
+  color: $white;
+  mix-blend-mode: difference;
+  position: fixed;
+  right: -3%;
+  bottom: 10%;
+  text-transform: uppercase;
+  font: 500 12px "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  
+  .mouse__text {
+    transform: rotate(90deg);
+  }
+  .mouse__text:before {
+    content: '';
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    background: $white;
+    animation: mouse 3s infinite cubic-bezier(1,.25,0,.75);
+    opacity: 1;
+    top: 45%;
+    right: 115%;
+
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .landing__image {
+    transform: scale(1);
+    // position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    margin-top: -18%;
+    z-index: 0;
+  }
+  .landing__headline {
+    &--major {
+      width: 975px;
+      font: 600 150px $montserrat;
+  
+      * {
+        position: relative;
+      }
+  
+      .A {
+        left: 2%;
+      }
+      .S {
+        left: 8%;
+      }
+      .C {
+        left: 18%;
+      }
+      .E {
+        left: 22%;
+      }
+      .N {
+        left: 32%;
+      }
+      .D {
+        left: 36%;
+      }
+    }
+    &--minor {
+      padding-top: 5%;
+      font-size: 38px;
+    }
+  }
+  .mouse {
+    right: 5%;
+  }
+}
