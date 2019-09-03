@@ -1,9 +1,8 @@
 import React from 'react';
 
 const WorkItem = (props, ref) => {
-  console.log(props.contentLayout)
   return(
-    <div className="content-wrap">
+    <div className="content-wrap" ref={props.contentRef}>
       <div className={`content content--layout ${props.contentLayout}`}>
         <img className="content__img" 
         src={props.image}

@@ -26,38 +26,38 @@ const About = () => {
   let tl1 = new TimelineMax();
   let tl2 = new TimelineMax();
 
-  // const controller = new ScrollMagic.Controller();
+  const controller = new ScrollMagic.Controller();
 
-  // const scene1 = new ScrollMagic.Scene({
-  //   triggerElement: ".sticky",
-  //   triggerHook: "onLeave",
-  //   duration: "100%"
-  // })
-  // .setPin(".sticky")
-  // .setTween(tl1)
-  // .addTo(controller);
-  // const scene2 = new ScrollMagic.Scene({
-  //   triggerElement: ".sticky",
-  //   triggerHook: "onLeave",
-  //   duration: "100%"
-  // })
-  // .setPin(".sticky")
-  // .setTween(tl2)
-  // .addTo(controller);
+  const scene1 = new ScrollMagic.Scene({
+    triggerElement: ".sticky",
+    triggerHook: "onLeave",
+    duration: "100%"
+  })
+  .setPin(".sticky")
+  .setTween(tl1)
+  .addTo(controller);
+  const scene2 = new ScrollMagic.Scene({
+    triggerElement: ".sticky",
+    triggerHook: "onLeave",
+    duration: "100%"
+  })
+  .setPin(".sticky")
+  .setTween(tl2)
+  .addTo(controller);
 
-  // useEffect(() => {
-  //   tl1.to(iphone__left, 1, {x: "-40%"})
-  //   .to(iphone__left, .5, {opacity: 0})
-  //   .to(phone, .5, {opacity: 1})
-  //   .to(screenG, .5, {y: -60})
-  //   .to(logoG, .5, {y: -120})
-  //   .to(burgerG, .5, {y: -80})
+  useEffect(() => {
+    tl1.to(iphone__left, 1, {x: "-40%"})
+    .to(iphone__left, .5, {opacity: 0})
+    // .to(phone, .5, {opacity: 1})
+    // .to(screenG, .5, {y: -60})
+    // .to(logoG, .5, {y: -120})
+    // .to(burgerG, .5, {y: -80})
 
-  //   // .from(phone, .5, {scale: "0"})
-  //   ;
-  //   tl2.to(iphone__right, 1, {x: "40%"})
-  //   .to(iphone__right, .5, {opacity: 0})
-  // }, [])
+    // .from(phone, .5, {scale: "0"})
+    ;
+    tl2.to(iphone__right, 1, {x: "40%"})
+    .to(iphone__right, .5, {opacity: 0})
+  }, [])
   // const [offset, shiftOffset] = useState(0);
   // const iphoneSeparation = () => {
   //   TweenMax.to(iphone__left, 2, {x: "-30%"})
@@ -115,7 +115,7 @@ const About = () => {
         </div>
       </div>
       {/* </div> */}
-      <div className="services sticky">
+      {/* <div className="services sticky">
         <div className="service__container">
           <img src={strategy} alt=""/>
           <h3 className="service__header">Strategy</h3>
@@ -154,8 +154,8 @@ const About = () => {
             <li>Research & Data</li>
             <li>Research & Data</li>
           </ul>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   )
 };
