@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from'react';
-import anime from 'animejs';
 import './work.scss';
 
 import { initShapeEl, createScrollWatchers } from './animation';
@@ -25,11 +24,26 @@ const WorkContents = [
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
     layout: "content--layout-1",
-  }
+  },
+  {
+    title: "nishi",
+    image: nishiSplash,
+    titlePos: 'nishiTitPos',
+    imagePos: 'nishiImgPos',
+    layout: "content--layout-2",
+  },
+  {
+    title: "nishi",
+    image: nishiSplash,
+    titlePos: 'nishiTitPos',
+    imagePos: 'nishiImgPos',
+    layout: "content--layout-2",
+  },
 ]
 const Works = () => {
   let refList = [];
-  let morph = useRef(null), shapeEl = useRef(null), contentElems = useRef(null);
+  let morph = useRef(null), shapeEl = useRef(null), 
+  contentElems = useRef(null), container = useRef(null);
 
   const handleMouseMove = (e) => {
     refList.map((item, i) => {
@@ -47,15 +61,15 @@ const Works = () => {
   }
   useEffect(() => {
     initShapeEl(morph)
-    createScrollWatchers(WorkContents, contentElems, shapeEl, morph)
+    createScrollWatchers(WorkContents, contentElems, shapeEl, morph, container, refList)
   })
   
   return(
-    <div className="works">
+    <div className="works" ref={refList}>
       <div className="works__wrapper">
         <div className="morph-wrap">
           <svg className="morph" ref={morph} width="1400" height="770" viewBox="0 0 1400 770">
-            <polygon ref={shapeEl} points="700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6"/>
+            <polygon ref={shapeEl} points="983.4,101.6 983.4,668.4 416.6,668.4 416.6,101.9 416.6,101.9 416.6,101.9"/>
           </svg>
         </div>
         <div className="content content--fixed">

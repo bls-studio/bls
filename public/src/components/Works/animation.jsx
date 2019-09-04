@@ -2,13 +2,11 @@ import React, { useRef } from 'react';
 import anime from'animejs';
 import scrollMonitor from 'scrollmonitor';
 import shapes from './morphs';
-// import { useScrollState } from 'scrollmonitor-hooks';
 
 export const initShapeEl = (morph) => {
-  console.log(morph, 'hello')
-  anime.remove(morph);
+  anime.remove(morph.current);
   anime({
-    targets: morph,
+    targets: morph.current,
     duration: 1,
     easing: 'linear',
     scaleX: shapes[0].scaleX,
@@ -18,19 +16,20 @@ export const initShapeEl = (morph) => {
     rotate: shapes[0].rotate+'deg'
   })
 }
-export const createScrollWatchers = (WorkContents, contentElems, shapeEl, morph) => {
-  const contentElemsTotal = WorkContents.length;
+export const createScrollWatchers = (WorkContents, shapeEl, morph, container, refList) => {
   let step;
+  const contentElemsTotal = WorkContents.length;
+  
   WorkContents.forEach((el,pos) => {
-    const scrollElemToWatch = pos ? contentElems[pos] : null;
     pos = pos ? pos : contentElemsTotal;
-    const watcher = scrollMonitor.create(scrollElemToWatch,-350);
+
+    const watcher = scrollMonitor.create(refList[pos]);
     
     watcher.enterViewport(function() {
       step = pos;
-      anime.remove(shapeEl);
+      anime.remove(shapeEl.current);
       anime({
-        targets: shapeEl,
+        targets: shapeEl.current,
         duration: shapes[pos].animation.points.duration,
         easing: shapes[pos].animation.points.easing,
         elasticity: shapes[pos].animation.points.elasticity || 0,
@@ -41,10 +40,9 @@ export const createScrollWatchers = (WorkContents, contentElems, shapeEl, morph)
           easing: shapes[pos].fill.easing
         }
       });
-
-      anime.remove(morph);
+      anime.remove(morph.current);
       anime({
-        targets: morph,
+        targets: morph.current,
         duration: shapes[pos].animation.svg.duration,
         easing: shapes[pos].animation.svg.easing,
         elasticity: shapes[pos].animation.svg.elasticity || 0,
@@ -57,13 +55,14 @@ export const createScrollWatchers = (WorkContents, contentElems, shapeEl, morph)
     });
 
     watcher.exitViewport(function() {
+      // console.log('left container')
       const idx = !watcher.isAboveViewport ? pos-1 : pos+1;
 
-      if( idx <= contentElemsTotal && step !== idx ) {
+      if( idx <= container && step !== idx ) {
         step = idx;
-        anime.remove(DOM.shapeEl);
+        anime.remove(shapeEl.current);
         anime({
-          targets: shapeEl,
+          targets: shapeEl.current,
           duration: shapes[idx].animation.points.duration,
           easing: shapes[idx].animation.points.easing,
           elasticity: shapes[idx].animation.points.elasticity || 0,
@@ -75,9 +74,9 @@ export const createScrollWatchers = (WorkContents, contentElems, shapeEl, morph)
           }
         });
 
-        anime.remove(morph);
+        anime.remove(morph.current);
         anime({
-          targets: morph,
+          targets: morph.current,
           duration: shapes[idx].animation.svg.duration,
           easing: shapes[idx].animation.svg.easing,
           elasticity: shapes[idx].animation.svg.elasticity || 0,
