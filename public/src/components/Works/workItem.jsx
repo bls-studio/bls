@@ -1,8 +1,8 @@
 import React from 'react';
 
-const WorkItem = (props, ref) => {
+const WorkItem = (props) => {
   return(
-    <div className="content-wrap" ref={props.contentRef}>
+    <div className="content-wrap" ref={props.containerList}>
       <div className={`content content--layout ${props.contentLayout}`}>
         <img className="content__img" 
         src={props.image}

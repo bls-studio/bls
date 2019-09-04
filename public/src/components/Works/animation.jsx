@@ -16,14 +16,14 @@ export const initShapeEl = (morph) => {
     rotate: shapes[0].rotate+'deg'
   })
 }
-export const createScrollWatchers = (WorkContents, shapeEl, morph, container, refList) => {
+export const createScrollWatchers = (shapeEl, morph, container, containerList) => {
   let step;
-  const contentElemsTotal = WorkContents.length;
+  const contentElemsTotal = containerList.length;
   
-  WorkContents.forEach((el,pos) => {
+  containerList.forEach((el,pos) => {
     pos = pos ? pos : contentElemsTotal;
 
-    const watcher = scrollMonitor.create(refList[pos]);
+    const watcher = scrollMonitor.create(el, -350);
     
     watcher.enterViewport(function() {
       step = pos;

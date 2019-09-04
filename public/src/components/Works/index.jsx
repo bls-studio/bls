@@ -33,15 +33,15 @@ const WorkContents = [
     layout: "content--layout-2",
   },
   {
-    title: "nishi",
-    image: nishiSplash,
-    titlePos: 'nishiTitPos',
-    imagePos: 'nishiImgPos',
-    layout: "content--layout-2",
+    title: "yippido",
+    image: yippido,
+    titlePos: 'yipTitPos',
+    imagePos: 'yipImgPos',
+    layout: "content--layout-1",
   },
 ]
 const Works = () => {
-  let refList = [];
+  let refList = [],  containerList = [];
   let morph = useRef(null), shapeEl = useRef(null), 
   contentElems = useRef(null), container = useRef(null);
 
@@ -61,7 +61,7 @@ const Works = () => {
   }
   useEffect(() => {
     initShapeEl(morph)
-    createScrollWatchers(WorkContents, contentElems, shapeEl, morph, container, refList)
+    createScrollWatchers(shapeEl, morph, container, containerList)
   })
   
   return(
@@ -69,7 +69,7 @@ const Works = () => {
       <div className="works__wrapper">
         <div className="morph-wrap">
           <svg className="morph" ref={morph} width="1400" height="770" viewBox="0 0 1400 770">
-            <polygon ref={shapeEl} points="983.4,101.6 983.4,668.4 416.6,668.4 416.6,101.9 416.6,101.9 416.6,101.9"/>
+            <polygon ref={shapeEl} points="700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6"/>
           </svg>
         </div>
         <div className="content content--fixed">
@@ -78,7 +78,7 @@ const Works = () => {
         {
           WorkContents.map(contents => {
             return <WorkItem 
-              contentRef={element => contentElems = element}
+              containerList={element => containerList.push(element)}
               image={contents.image}
               title={contents.title}
               mouseMove={handleMouseMove}
