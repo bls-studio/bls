@@ -8,16 +8,11 @@
   // width: 940px;
   margin: 0 auto;
   position: relative;
-  background: #1d1d1d;
-  color: $white;
+  background: $black;
+	color: $white;
+	font-family: $montserrat;
   z-index: 0;
 }
-// .works__wrapper {
-//   width: 220px;
-//   position: absolute;
-//   top: 0;
-//   left: -240px; 
-// }
 
 .morph-wrap {
 	position: fixed;
@@ -37,9 +32,7 @@
 	height: 100%;
 	fill: none;
 	stroke-width: 12px;
-	stroke: $darkGrey;
-	// fill: $grey;
-	// fill: var(--background-color-2);
+	stroke: #675641;
 	flex: none;
 }
 .content {
@@ -161,6 +154,10 @@
 	justify-self: start;
 	z-index: 10;
 	padding: 0 1em 0.15em;
+	color: $gold;
+	text-decoration: none;
+	font-weight: 500;
+	font-family: $montserrat;
 }
 .content--layout-2 {
 	grid-template-areas:	"... title title title"

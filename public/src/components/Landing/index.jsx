@@ -27,13 +27,13 @@ const Landing = () => {
         <img src={mountains} alt="" className="parallax__image"/>
       </div>
       <div className="landing__headline">
-        <div className="landing__headline--major">
+        <div className="landing__headline--major" style={{ bottom: offset / 20 }}>
           <div className="A">A</div>
-          <div className="S" style={{ bottom: offset / 20 }}>S</div>
+          <div className="S" >S</div>
           <div className="C">C</div>
-          <div className="E" style={{ bottom: offset / 20 }}>E</div>
+          <div className="E">E</div>
           <div className="N">N</div>
-          <div className="D" style={{ bottom: offset / 20 }}>D</div>
+          <div className="D">D</div>
         </div>
         <div className="landing__headline--minor">
           <h3>A creative web development studio.</h3>

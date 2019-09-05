@@ -6,16 +6,18 @@ import Landing from '../Landing'
 import About from '../About';
 import Works from '../Works';
 import Services from '../Services';
+import Contact from '../Contact';
 
 
 const App = () => (
   <div>
     <Navbar />
     <Landing />
-    {/* <About /> */}
+    <About />
     <Works />
     {/* <Menu /> */}
     {/* <Services /> */}
+    {/* <Contact/> */}
   </div>
 );
 

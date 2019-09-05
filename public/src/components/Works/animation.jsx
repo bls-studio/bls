@@ -22,7 +22,6 @@ export const createScrollWatchers = (shapeEl, morph, container, containerList) =
   
   containerList.forEach((el,pos) => {
     pos = pos ? pos : contentElemsTotal;
-
     const watcher = scrollMonitor.create(el, -350);
     
     watcher.enterViewport(function() {
