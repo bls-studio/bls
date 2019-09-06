@@ -9,55 +9,55 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 import './about.scss';
 
 // Assets
-import iLeft from '../../../dist/assets/left.png';
-import iRight from '../../../dist/assets/right.png';
-import strategy from '../../../dist/assets/illustrations/strategy.svg';
-import design from '../../../dist/assets/illustrations/design.svg';
-import technology from '../../../dist/assets/illustrations/technology.svg';
-import shell from '../../../dist/assets/iPhone_X_Isometric_Landscape_Left.png';
-import holding from '../../../dist/assets/screen.png';
-import logo from '../../../dist/assets/logo.png';
-import burger from '../../../dist/assets/burger.png';
+import iLeft from '../../../../dist/assets/left.png';
+import iRight from '../../../../dist/assets/right.png';
+// import strategy from '../../../dist/assets/illustrations/strategy.svg';
+// import design from '../../../dist/assets/illustrations/design.svg';
+// import technology from '../../../dist/assets/illustrations/technology.svg';
+// import shell from '../../../dist/assets/iPhone_X_Isometric_Landscape_Left.png';
+// import holding from '../../../dist/assets/screen.png';
+// import logo from '../../../dist/assets/logo.png';
+// import burger from '../../../dist/assets/burger.png';
 
 const About = () => {
   let iphone__left= useRef(null), iphone__right = useRef(null);
   let shellG = useRef(null), screenG = useRef(null), burgerG = useRef(null), logoG = useRef(null), phone = useRef(null);
 
-  let tl1 = new TimelineMax();
-  let tl2 = new TimelineMax();
+  // let tl1 = new TimelineMax();
+  // let tl2 = new TimelineMax();
 
-  const controller = new ScrollMagic.Controller();
+  // const controller = new ScrollMagic.Controller();
 
-  const scene1 = new ScrollMagic.Scene({
-    triggerElement: ".sticky",
-    triggerHook: "onLeave",
-    duration: "100%"
-  })
-  .setPin(".sticky")
-  .setTween(tl1)
-  .addTo(controller);
-  const scene2 = new ScrollMagic.Scene({
-    triggerElement: ".sticky",
-    triggerHook: "onLeave",
-    duration: "100%"
-  })
-  .setPin(".sticky")
-  .setTween(tl2)
-  .addTo(controller);
+  // const scene1 = new ScrollMagic.Scene({
+  //   triggerElement: ".sticky",
+  //   triggerHook: "onLeave",
+  //   duration: "100%"
+  // })
+  // .setPin(".sticky")
+  // .setTween(tl1)
+  // .addTo(controller);
+  // const scene2 = new ScrollMagic.Scene({
+  //   triggerElement: ".sticky",
+  //   triggerHook: "onLeave",
+  //   duration: "100%"
+  // })
+  // .setPin(".sticky")
+  // .setTween(tl2)
+  // .addTo(controller);
 
-  useEffect(() => {
-    tl1.to(iphone__left, 1, {x: "-40%"})
-    .to(iphone__left, .5, {opacity: 0})
-    // .to(phone, .5, {opacity: 1})
-    // .to(screenG, .5, {y: -60})
-    // .to(logoG, .5, {y: -120})
-    // .to(burgerG, .5, {y: -80})
+  // useEffect(() => {
+  //   tl1.to(iphone__left, 1, {x: "-40%"})
+  //   .to(iphone__left, .5, {opacity: 0})
+  //   // .to(phone, .5, {opacity: 1})
+  //   // .to(screenG, .5, {y: -60})
+  //   // .to(logoG, .5, {y: -120})
+  //   // .to(burgerG, .5, {y: -80})
 
-    // .from(phone, .5, {scale: "0"})
-    ;
-    tl2.to(iphone__right, 1, {x: "40%"})
-    .to(iphone__right, .5, {opacity: 0})
-  }, [])
+  //   // .from(phone, .5, {scale: "0"})
+  //   ;
+  //   tl2.to(iphone__right, 1, {x: "40%"})
+  //   .to(iphone__right, .5, {opacity: 0})
+  // }, [])
   // const [offset, shiftOffset] = useState(0);
   // const iphoneSeparation = () => {
   //   TweenMax.to(iphone__left, 2, {x: "-30%"})

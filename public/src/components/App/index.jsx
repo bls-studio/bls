@@ -2,22 +2,21 @@ import React from 'react';
 
 import Navbar from '../Navbar';
 import Menu from '../OverlayMenu'
-import Landing from '../Landing'
-import About from '../About';
 import Works from '../Works';
 import Services from '../Services';
 import Contact from '../Contact';
-
+import Home from '../Home';
+import Footer from '../Footer';
 
 const App = () => (
   <div>
     <Navbar />
-    <Landing />
-    <About />
-    <Works />
+    <Home />
+    {/* <Works /> */}
     {/* <Menu /> */}
     {/* <Services /> */}
     {/* <Contact/> */}
+    <Footer />
   </div>
 );
 

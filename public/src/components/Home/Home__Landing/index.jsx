@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './newLanding.scss';
 
 // Assets
-import mountains from '../../../dist/assets/mountains.png';
+import mountains from '../../../../dist/assets/mountains.png';
 
 
 const Landing = () => {

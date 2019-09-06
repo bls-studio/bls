@@ -7,14 +7,16 @@ $white: #FEFEF3;
 $offWhite: #D5D5D5;
 $black: #161D25;
 $gold: #C7A47A;
+$darkGold: #BC994D;
 $darkGrey: #333232;
+$lightGold: #ECD7AB;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
 $montserrat:'Montserrat', sans-serif;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$roboto: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+$hepta: 'Hepta Slab', serif;
 
 // // Background Colors
 @function colorSwap($color) {
