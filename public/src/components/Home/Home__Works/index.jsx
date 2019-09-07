@@ -15,32 +15,32 @@ const WorkContents = [
     image: nishiSplash,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
-    layout: "home__works__item",
-    pos: 0,
+    worklayout: "home__works__item",
+    layout: "content--layout-2",
   },
   {
     title: "yippido",
     image: yippido,
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
-    layout: "home__works__item",
-    pos: 1,
+    worklayout: "home__works__item",
+    layout: "content--layout-1",
   },
   {
     title: "nishi",
     image: nishiSplash,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
-    layout: "home__works__item",
-    pos: 2,
+    worklayout: "home__works__item",
+    layout: "content--layout-2",
   },
   {
     title: "yippido",
     image: yippido,
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
-    layout: "home__works__item",
-    pos: 3
+    worklayout: "home__works__item",
+    layout: "content--layout-1",
   },
 ]
 
@@ -111,7 +111,8 @@ const Works = () => {
             return <WorkItem 
               image={work.image}
               title={work.title}
-              contentWrap={work.layout}
+              contentWrap={work.worklayout}
+              contentLayout={work.layout}
               mouseEnter={increment}
               containerList={element => containerList.push(element)}
             />
