@@ -77,45 +77,7 @@
     position: relative;
   }
 }
-.services {
-  display: flex;
-  flex-direction: column;
-  // color: $black;
-}
-.service__container {
-  grid-area: about__service;
-  // color: $offWhite;
-  // padding: 64px 0;
-  max-width: 500px;
-  font-family: $montserrat;
-  margin: 0 4%;
 
-  *{
-    margin: 13px 0;
-
-  }
-  img {
-    width: 300px;
-  }
-  .service__header {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .service__description {
-    margin: 1.5vw 0 0;
-    font-size: 14px;
-    line-height: 1.5;
-
-  }
-  .service__items {
-    font-size: 14px;
-    font-weight: 500;
-    // margin-top: 24px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    opacity: .8;
-  }
-}
 
 @media only screen and (min-width: 1080px) {
   .about {
@@ -153,26 +115,5 @@
   }
   .parallax__iphone {
     transform: scale(1) translate(-70%);
-  }
-  .services {
-    flex-direction: row;
-  }
-  .service__container {
-    padding: 64px 0;
-    max-width: 500px;
-
-    img {
-      width: 300px;
-    }
-    .service__header {
-      font-size: 18px;
-    }
-    .service__description {
-      font-size: 16px;
-    }
-    .service__items {
-      font-size: 16px;
-    }
- 
   }
 }

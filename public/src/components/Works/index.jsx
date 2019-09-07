@@ -43,7 +43,7 @@ const WorkContents = [
 const Works = () => {
   let refList = [],  containerList = [];
   let morph = useRef(null), shapeEl = useRef(null), 
-  contentElems = useRef(null), container = useRef(null);
+  container = useRef(null);
 
   const handleMouseMove = (e) => {
     refList.map((item, i) => {

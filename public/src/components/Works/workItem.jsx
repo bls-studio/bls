@@ -2,7 +2,9 @@ import React from 'react';
 
 const WorkItem = (props) => {
   return(
-    <div className="content-wrap" ref={props.containerList}>
+    <div className={`content-wrap ${props.contentWrap}`} ref={props.containerList}
+      onMouseEnter={props.mouseEnter}
+    >
       <div className={`content content--layout ${props.contentLayout}`}>
         <img className="content__img" 
         src={props.image}

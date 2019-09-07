@@ -46,6 +46,7 @@
     }
   } 
   &--minor {
+    font-family: $hepta;
     padding-top: 3%;
     font-weight: 400;
     position: relative;
@@ -57,7 +58,7 @@
 
 .mouse {
   color: $gold;
-  z-index: 10;
+  z-index: 15;
   mix-blend-mode: difference;
   position: fixed;
   right: -3%;
