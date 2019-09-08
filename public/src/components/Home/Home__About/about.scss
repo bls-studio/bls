@@ -1,6 +1,6 @@
 @import '../../App/global.scss';
 
-.about {
+.home__about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   position: relative;
   z-index: 1;
 }
-.about__container {
+.home__about__container {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -20,11 +20,11 @@
   align-items: center;
   position: relative;
 }
-.about__description {
+.home__about__description {
   margin: 5% 0 15%;
   font-size: 16px;
 }
-.about__header {
+.home__about__header {
   margin: 10% auto;
 
 
@@ -69,7 +69,7 @@
     // left: 1%;
   }
 }
-.about__image {
+.home__about__image {
   grid-area: image;
   width: fit-content;
 
@@ -80,11 +80,11 @@
 
 
 @media only screen and (min-width: 1080px) {
-  .about {
+  .home__about {
     padding: 140px 10%;
     width: 80%;
   }
-  .about__container {
+  .home__about__container {
     display: grid;
     grid-template-areas: ". desc ."
     "leftText image rightText";
@@ -93,14 +93,14 @@
     justify-items: center;
     position: relative;
   }
-  .about__description {
+  .home__about__description {
     font-size: 30px;
     width: 650px;
     grid-area: desc;
     // padding: 5% 0;
     // margin: 5% 0;
   }
-  .about__header {
+  .home__about__header {
     flex-direction: row;
     
     &--left {

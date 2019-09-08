@@ -1,13 +1,13 @@
 @import '../../App/global.scss';
 
-.services {
+.home__services {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   background: $grey;
 }
-.service__container {
+.home__service__container {
   grid-area: about__service;
 
   max-width: 500px;
@@ -21,18 +21,18 @@
   img {
     width: 300px;
   }
-  .service__header {
+  .home__service__header {
     font-size: 16px;
     font-weight: 500;
     font-family: $hepta;
   }
-  .service__description {
+  .home__service__description {
     margin: 1.5vw 0 0;
     font-size: 14px;
     line-height: 1.6;
 
   }
-  .service__items {
+  .home__service__items {
     font-size: 14px;
     font-weight: 500;
     // margin-top: 24px;
@@ -43,24 +43,24 @@
 }
 
 @media only screen and (min-width: 1080px) {
-  .services {
+  .home__services {
     flex-direction: row;
     justify-content: center;
   }
-  .service__container {
+  .home__service__container {
     padding: 64px 0;
     max-width: 350px;
 
     img {
       width: 300px;
     }
-    .service__header {
+    .home__service__header {
       font-size: 18px;
     }
-    .service__description {
+    .home__service__description {
       font-size: 12px;
     }
-    .service__items {
+    .home__service__items {
       font-size: 12px;
     }
  

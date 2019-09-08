@@ -92,12 +92,12 @@ const About = () => {
   //     .to(burgerG, 2, {y: -80})
   // })
   return(
-    <div className="about">
-      <div className="about__container">
-        <p className="about__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</p>
-        <div className="about__image" >
-          <img src={iLeft} className="about__image--left" alt="" ref={element => iphone__left = element}/>
-          <img src={iRight} className="about__image--right" alt="" ref={element => iphone__right = element}/>
+    <div className="home__about">
+      <div className="home__about__container">
+        <p className="home__about__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</p>
+        <div className="home__about__image" >
+          <img src={iLeft} className="home__about__image--left" alt="" ref={element => iphone__left = element}/>
+          <img src={iRight} className="home__about__image--right" alt="" ref={element => iphone__right = element}/>
         </div>
         {/* <div className="parallax__iphone" ref={element => phone = element}>
           <img className="parallax__iphone parallax__iphone--logo" src={logo} alt="" ref={element => logoG = element}/>
@@ -105,10 +105,10 @@ const About = () => {
           <img className="parallax__iphone parallax__iphone--screen" src={holding} alt=""  ref={element => screenG = element}/>
           <img className="parallax__iphone parallax__iphone--shell" src={shell} alt=""/>
         </div> */}
-        <div className="about__header--left">
+        <div className="home__about__header--left">
           Helping our partners move forward through
         </div>
-        <div className="about__header--right">
+        <div className="home__about__header--right">
           Strategy. Design. Technology.
         </div>
       </div>

@@ -22,7 +22,7 @@ const Footer = () => (
           <p>start a</p>
           <p className="footer__right--large">NEW PROJECT</p>
           <p>with us</p>
-          <img src={footer__image} alt=""/>
+          <img src={footer__image} alt="" className="footer__image"/>
         </div>
       </div>
     </div>

@@ -3,15 +3,6 @@
 $menu-speed: .75s;
 $overlay-color: rgba(24, 39, 51 , 0.85);
 
-@keyframes menuColor {
-  from {
-    color: $black;
-  }
-  to {
-    color: #eee;
-  }
-}
-
 .navbar__container {
   z-index: 10;
   position: fixed;
@@ -32,7 +23,7 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   font: 600 20px $montserrat;
   color: $gold;
   text-decoration: none;
-  padding-left: 20px;
+  // padding-left: 10px;
   visibility: hidden;
 }
 
@@ -151,6 +142,7 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   }
   .logo {
     margin-left: 110px;
+    padding-left: 20px;
   }
   .cta, .logo {
     visibility: visible;
