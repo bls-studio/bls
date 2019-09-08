@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './newLanding.scss';
 
 // Assets
-import mountains from '../../../../dist/assets/mountains.png';
+import cutout from '../../../../dist/assets/cutout.svg';
+import mountains from '../../../../dist/assets/mountain.png';
 
 
 const Landing = () => {
@@ -23,11 +24,12 @@ const Landing = () => {
 
   return(
     <div className="landing">
-      <div className="landing__image">
-        <img src={mountains} alt="" className="parallax__image"/>
+      <img src={cutout} className="landing__cutout" alt=""/>
+      <div className="landing__image__container">
+        <img src={mountains} alt="" className="landing__image"  style={{ bottom: offset / 10 }}/>
       </div>
       <div className="landing__headline">
-        <div className="landing__headline--major" style={{ bottom: offset / 20 }}>
+        <div className="landing__headline--major" style={{ bottom: offset / - 20 }}>
           <div className="A">A</div>
           <div className="S" >S</div>
           <div className="C">C</div>
