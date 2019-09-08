@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 
 import Navbar from '../Navbar';
 import Menu from '../OverlayMenu'
@@ -11,11 +13,14 @@ import Footer from '../Footer';
 const App = () => (
   <div>
     <Navbar />
-    <Home />
-    {/* <Works /> */}
-    {/* <Menu /> */}
-    {/* <Services /> */}
-    {/* <Contact/> */}
+    <Switch>
+      <Route exact path="/" render={props => <Home {...props} />}/>
+      <Route exact path="/services" render={props => <Services {...props} />}/>
+      <Route exact path="/works" render={props => <Works {...props} />}/>
+      {/* <Route exact path="/" render={props => <Editor {...props} />}/> */}
+
+
+    </Switch>
     <Footer />
   </div>
 );

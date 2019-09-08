@@ -15,7 +15,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: -10;
+  z-index: -30;
 }
 .footer__overlay {
   width: 100vw;
@@ -34,7 +34,7 @@
   width: 100%;
   padding-left: 10%;
   height: 100px;
-  background: black;
+  background: $black;
   font: 600 36px $montserrat;
   display: flex;
   align-items: center;
