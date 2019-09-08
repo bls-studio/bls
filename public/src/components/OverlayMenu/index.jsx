@@ -13,7 +13,7 @@ const Menu = (props) => {
     props.dropped ?
     TweenMax.to(dropdown, 1, {y: "0%", ease: Circ.easeInOut})    
     :
-    TweenMax.to(dropdown, 1, {y: "-100%", ease: Circ.easeInOut, delay: .5})    
+    TweenMax.to(dropdown, 1, {y: "-100%", ease: Circ.easeInOut, delay: .3})    
 
   })
   return (

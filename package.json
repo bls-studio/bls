@@ -5,5 +5,8 @@
   "repository": "https://github.com/bls-studio/bls.git",
   "author": "blake-swl <seulwoolee93@gmail.com>",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd public/ && yarn run build"
+  }
 }

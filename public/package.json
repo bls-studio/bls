@@ -31,7 +31,8 @@
     "webpack-cli": "^3.3.6"
   },
   "scripts": {
-    "webpack": "webpack -w"
+    "webpack": "webpack -w",
+    "build": "webpack -p"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
