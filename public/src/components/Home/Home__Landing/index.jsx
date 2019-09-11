@@ -26,7 +26,7 @@ const Landing = () => {
     <div className="landing">
       <img src={cutout} className="landing__cutout" alt=""/>
       <div className="landing__image__container">
-        <img src={mountains} alt="" className="landing__image"  style={{ bottom: offset / 10 }}/>
+        <img src={mountains} alt="" className="landing__image"  style={{ bottom: offset / 8 }}/>
       </div>
       <div className="landing__headline">
         <div className="landing__headline--major" style={{ bottom: offset / - 20 }}>

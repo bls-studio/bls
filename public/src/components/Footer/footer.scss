@@ -5,11 +5,9 @@
   z-index: 0;
   background: white;
   color: $darkGold;
-  letter-spacing: 3px;
   line-height: 1.8;
   text-transform: uppercase;
   font-size: 14px;
-  // font-weight: 500;
 }
 .footer__backgroundImage {
   position: absolute;
@@ -40,7 +38,15 @@
   align-items: center;
   text-transform: uppercase;
 }
-
+.footer__item {
+  // font-size: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .footer__left {
   width: 100%;
   height: 300px;
@@ -51,6 +57,8 @@
 
   .footer__header {
     font-weight: 600;
+    letter-spacing: 3px;
+    padding: 0 0 10px;
   }
 }
 .footer__right {
@@ -79,6 +87,9 @@
   .footer {
     letter-spacing: 2px;
   }
+  .footer__item {
+    font-size: 10px;
+  }
   .footer__overlay {
     height: 100vh;
   }
@@ -99,16 +110,15 @@
     height: 200px;
     grid-row: 2;
   }
-  .footer__left {
+  // .footer__left {
+  //   width: calc(300px - 10%);
+  //   padding-left: 10%;
+  //   padding-top: 5%;
+  // }
+  .footer__right, .footer__left {
     width: calc(300px - 10%);
     padding-left: 10%;
-    padding-top: 10%;
-  
-  }
-  .footer__right {
-    width: calc(300px - 10%);
-    padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 5%;
     
     &--large {
       font-weight: 600;

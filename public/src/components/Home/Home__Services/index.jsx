@@ -14,11 +14,10 @@ const Services = () => (
       {/* <p className="home__service__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p> */}
       <ul className="home__service__items">
         <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
+        <li>Branding & Positioning</li>
+        <li>Business Consulting</li>
+        <li>Innovation</li>
+        <li>SEO/SEM</li>
       </ul>
     </div>
     <div className="home__service__container">
@@ -26,12 +25,11 @@ const Services = () => (
       <h3 className="home__service__header">Design</h3>
       {/* <p className="home__service__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p> */}
       <ul className="home__service__items">
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
+        <li>User Research & Testing</li>
+        <li>UX Design</li>
+        <li>Visual Design</li>
+        <li>Information Architecture</li>
+        <li>Environmental Design</li>
       </ul>
     </div>
     <div className="home__service__container">
@@ -39,12 +37,11 @@ const Services = () => (
       <h3 className="home__service__header">Technology</h3>
       {/* <p className="home__service__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p> */}
       <ul className="home__service__items">
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
-        <li>Research & Data</li>
+        <li>Application Development</li>
+        <li>Web Development</li>
+        <li>Enterprise CMS</li>
+        <li>Emerging Tech</li>
+        <li>eCommerce</li>
       </ul>
     </div> 
   </div>

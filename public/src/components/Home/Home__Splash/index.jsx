@@ -10,7 +10,7 @@ const Splash = () => {
   let splashRef = useRef(null);
 
   useEffect(() => {
-    const watcher = scrollMonitor.create(splashRef)
+    const watcher = scrollMonitor.create(splashRef, -400)
     console.log(splashRef)
     watcher.enterViewport(() => {
       console.log(watcher, 'in view')
