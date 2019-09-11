@@ -14,12 +14,21 @@ const Splash = () => {
     console.log(splashRef)
     watcher.enterViewport(() => {
       console.log(watcher, 'in view')
-      anime({
-        targets: splashRef,
-        left: "-5%",
-        duration: 1000,
-        easing: "cubicBezier(1,.25,0,.75)"
-      })
+      if (screen.width < 500) {
+        anime({
+          targets: splashRef,
+          left: "-200%",
+          duration: 1000,
+          easing: "cubicBezier(1,.25,0,.75)"
+        })
+      } else {
+        anime({
+          targets: splashRef,
+          left: "-5%",
+          duration: 1000,
+          easing: "cubicBezier(1,.25,0,.75)"
+        })
+      }
     })
   })
 
