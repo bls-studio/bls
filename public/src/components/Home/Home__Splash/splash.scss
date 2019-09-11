@@ -1,0 +1,45 @@
+@import '../../App/global.scss';
+
+.home__splash {
+  background: linear-gradient(149deg, rgba(109,163,217,1) 0%, rgba(199,164,122,1) 80%);
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+}
+.home__splash__background {
+  // width: 50%;
+  position: absolute;
+  z-index: 0;
+  left: -200%;
+  height: 100%;
+}
+.home__splash__text{
+  padding: 8% 0;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width: 80%;
+  font: 600 60px $montserrat;
+  color: #6da3d9;
+}
+
+@media only screen and (min-width: 1080px) {
+  .home__splash {
+    height: 100vh;
+  }
+  .home__splash__background {
+    // transform: scale(1);
+    // width: 100%;
+    left:-90%;
+  }
+  .home__splash__text{
+    width: 70%;
+    background: linear-gradient(149deg, rgba(109,163,217,1) 0%, rgba(199,164,122,1) 80%);
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font: 600 150px $montserrat;
+  }
+}
+

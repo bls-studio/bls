@@ -94,7 +94,7 @@ const About = () => {
   return(
     <div className="home__about">
       <div className="home__about__container">
-        <p className="home__about__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</p>
+        <p className="home__about__description">At ascend studio, we put you and your ideas at the forefront in creating proven, rich interactive experiences that drive your brand forward.</p>
         <div className="home__about__image" >
           <img src={iLeft} className="home__about__image--left" alt="" ref={element => iphone__left = element}/>
           <img src={iRight} className="home__about__image--right" alt="" ref={element => iphone__right = element}/>
