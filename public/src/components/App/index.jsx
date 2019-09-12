@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import ScrollToTop from '../Utils/scrollToTop';
 
 import Loader from '../Loader';
 import Navbar from '../Navbar';
@@ -12,18 +13,22 @@ import Footer from '../Footer';
 
 const App = () => (
   <div>
-    <Navbar />
-    {/* <Loader /> */}
-    <Switch>
-      <Route exact path="/" render={props => <Home {...props} />}/>
-      <Route exact path="/services" render={props => <Services {...props} />}/>
-      <Route exact path="/works" render={props => <Works {...props} />}/>
+    <ScrollToTop>
+      <Navbar />
+      {/* <Loader /> */}
+      <Switch>
+        <Route exact path="/" render={props => <Home {...props} />}/>
+        <Route exact path="/services" render={props => <Services {...props} />}/>
+        <Route exact path="/works" render={props => <Works {...props} />}/>
 
 
-    </Switch>
-    <Footer />
+      </Switch>
+      <Footer />
+
+    </ScrollToTop>
   </div>
 );
+
 
 {/* <Route exact path="/" render={props => <Editor {...props} />}/> */}
 export default App;
