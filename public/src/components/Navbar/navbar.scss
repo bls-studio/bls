@@ -1,17 +1,13 @@
 @import '../App/global.scss';
 
-$menu-speed: .75s;
-$overlay-color: rgba(24, 39, 51 , 0.85);
 
 .navbar__container {
   z-index: 10;
   position: fixed;
-  // width:100%;
   width: calc(100% - 72px);
   margin: 2em auto;
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   mix-blend-mode: exclusion;
 }
 
@@ -26,8 +22,6 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   stroke-width: 0.2px;
   visibility: hidden;
 }
-
-
 .cta {
   position: fixed;
   mix-blend-mode: difference;
@@ -109,10 +103,6 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
 .hamburger > div:after {
   top: 8px;
 }
-// .toggler:hover + .hamburger > div {
-//   transform: rotate(45deg);
-// }
-
 .toggler:checked + .hamburger > div {
   transform: rotate(135deg);
 }
@@ -131,8 +121,6 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   //   right: 10%;
   // }
   .navbar__container {
-    // width: calc(100% - 240px);
-    // margin: 2em auto;
     width: 100%;
   }
   .navbar__items {
@@ -147,6 +135,9 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
   }
   .cta, .logo {
     visibility: visible;
+  }
+  .toggler:hover + .hamburger > div {
+    transform: rotate(45deg);
   }
 }
 
