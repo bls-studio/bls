@@ -12,7 +12,7 @@
 }
 
 .logo {
-  position: absolute;
+  // position: absolute;
   top:-2%;
   left: 0;
   margin-left: 36px;
@@ -31,7 +31,7 @@
   text-transform: uppercase;
   z-index: 15;
   top: 0;
-  right: 4%;
+  right: 10%;
   visibility: hidden;
   transition: all .4s cubic-bezier(1,.25,0,.75);
   -webkit-background-clip: text;
@@ -117,9 +117,9 @@
 }
 
 @media only screen and (min-width: 1080px) {
-  // .cta {
-  //   right: 10%;
-  // }
+  .cta {
+    right: 4%;
+  }
   .navbar__container {
     width: 100%;
   }

@@ -19,7 +19,7 @@ const Navbar = () => {
     
     CSSPlugin.useSVGTransformAttr = true;
     
-    let tl = new TimelineMax(),
+    let tl = new TimelineMax({yoyo:true}),
         path = 'svg *',
         stagger_val = 0.0125,
         duration = 0.75;
