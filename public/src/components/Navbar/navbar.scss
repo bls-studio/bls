@@ -16,14 +16,14 @@ $overlay-color: rgba(24, 39, 51 , 0.85);
 }
 
 .logo {
-  top: -5px;
+  position: absolute;
+  top:-2%;
   left: 0;
-  z-index: 15;
   margin-left: 36px;
-  font: 600 20px $montserrat;
-  color: $gold;
-  text-decoration: none;
-  // padding-left: 10px;
+  z-index: 15;
+  fill: $gold;
+  stroke: $gold;
+  stroke-width: 0.2px;
   visibility: hidden;
 }
 
