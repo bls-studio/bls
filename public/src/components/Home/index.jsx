@@ -6,6 +6,7 @@ import About from './Home__About';
 import Works from './Home__Works';
 import Services from './Home__Services';
 import Splash from './Home__Splash';
+import withSplashScreen from '../Loader/withSplashScreen';
 
 const Home = () => (
   <div>

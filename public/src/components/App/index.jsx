@@ -2,6 +2,9 @@ import React, {useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ScrollToTop from '../Utils/scrollToTop';
 
+import withSplashScreen from '../Loader/withSplashScreen';
+
+
 import Loader from '../Loader';
 import Navbar from '../Navbar';
 import Menu from '../OverlayMenu'
@@ -12,15 +15,9 @@ import Home from '../Home';
 import Footer from '../Footer';
 
 const App = () => {
-  const [isLoading, loader] = useState(true);
 
-  useEffect(() => {
-    // console.log(isLoading)
-    // loader(!isLoading)
-  })
   return (
     <div>
-      {/* <Loader/> */}
       <ScrollToTop>
         <Navbar />
         <Switch>
@@ -31,10 +28,7 @@ const App = () => {
         <Footer />
       </ScrollToTop>
     </div>
-    // isLoading ? <Loader/> : 
-    // <div>
-    // </div>
   )
 };
 
-export default App;
+export default withSplashScreen(App);

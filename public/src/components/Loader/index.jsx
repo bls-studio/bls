@@ -44,16 +44,6 @@ const Loader = () => {
     
     tl.staggerTo(path, duration, stagger_opts_to, stagger_val);
     
-    // var $svg = $('svg');
-    // $svg.hover(
-    //   function() {
-    //     tl.timeScale(0.15)
-    //     to({ yoyo: true });
-    //   },
-    //   function() {
-    //     tl.timeScale(1);
-    //   });
-    
   })
 
 
