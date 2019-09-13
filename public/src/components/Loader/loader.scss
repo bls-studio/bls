@@ -1,42 +1,17 @@
-#container {
+@import '../App/global.scss';
+
+.loader__container {
   height: 100vh;
   width: 100vw;
-  background: #161D25;
+  background: $black;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-// @import "compass";
-
-// svg {
-//   // width: 180px;
-//   // height: 30px;
-//   position: absolute;
-//   left: 0;
-//   top: -5px;
-//   margin-left: 36px;
-//   // overflow: hidden;
-// }
-
-// svg > * { 
-//   fill: #C7A47A;
-//   stroke: #C7A47A;
-//   stroke-width: 0.85px;
-// }
-
-/* hover tip */
-
-// #container:hover:after {
-//   content: "Hover to Slow Motion";
-//   position: absolute;
-//   left: 0; right: 0; bottom: 1vh;
-//   color: #C7A47A;
-//   text-align: center;
-//   text-transform: uppercase;
-//   letter-spacing: 0.5px;
-//   font: 700 9px/14px Tahoma, sans-serif;
-//   animation: (tip 2.5s forwards);
-// }
-
-// @keyframes tip {
-//   0%, 100% { opacity: 0; }
-//   10%, 80% { opacity: 1; }
-// }
+.loader {
+  fill: $blue;
+  stroke: $blue;
+  padding: 5vw;
+  width: 100vw;
+}

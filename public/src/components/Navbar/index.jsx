@@ -18,8 +18,8 @@ const Navbar = () => {
     let paths = logo.children;
     
     CSSPlugin.useSVGTransformAttr = true;
-    
-    let tl = new TimelineMax({yoyo:true}),
+ 
+    let tl = new TimelineMax(),
         path = 'svg *',
         stagger_val = 0.0125,
         duration = 0.75;
@@ -42,7 +42,6 @@ const Navbar = () => {
       });
     }
     tl.staggerTo(path, duration, stagger_opts_to, stagger_val);
-    
   })
 
   return(
