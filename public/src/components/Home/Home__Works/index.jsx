@@ -7,12 +7,13 @@ import WorkItem from '../../Works/workItem';
 // Assets
 import yippido from '../../../../dist/assets/yippido.png';
 import nishiSplash from '../../../../dist/assets/nishiSplash.png';
+import dodgers from '../../../../dist/assets/dodgers.png';
 import shapes from '../../Works/morphs';
 
 const WorkContents = [
   {
-    title: "nishi",
-    image: nishiSplash,
+    title: "dodgers",
+    image: dodgers,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
     worklayout: "home__works__item",
