@@ -6,22 +6,23 @@ import WorkItem from '../../Works/workItem';
 
 // Assets
 import yippido from '../../../../dist/assets/yippido.png';
-import nishiSplash from '../../../../dist/assets/nishiSplash.png';
-import dodgers from '../../../../dist/assets/dodgers.png';
+import nishiSplash from '../../../../dist/assets/works/NishiMenu.png';
+import jordan from '../../../../dist/assets/works/Jordans.png'
+import dodgers from '../../../../dist/assets/works/Dodgers.png';
 import shapes from '../../Works/morphs';
 
 const WorkContents = [
   {
-    title: "dodgers",
-    image: dodgers,
+    title: "jordan",
+    image: jordan,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
     worklayout: "home__works__item",
     layout: "content--layout-2",
   },
   {
-    title: "yippido",
-    image: yippido,
+    title: "dodgers",
+    image: dodgers,
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
     worklayout: "home__works__item",
