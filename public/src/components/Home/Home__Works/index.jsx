@@ -9,36 +9,37 @@ import yippido from '../../../../dist/assets/yippido.png';
 import nishiSplash from '../../../../dist/assets/works/NishiMenu.png';
 import jordan from '../../../../dist/assets/works/Jordans.png'
 import dodgers from '../../../../dist/assets/works/Dodgers.png';
+import spotify from '../../../../dist/assets/works/Music.png'
 import shapes from '../../Works/morphs';
 
 const WorkContents = [
   {
-    title: "jordan",
-    image: jordan,
+    title: "spotify",
+    image: spotify,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
     worklayout: "home__works__item",
     layout: "content--layout-2",
   },
   {
-    title: "dodgers",
-    image: dodgers,
+    title: "nike",
+    image: jordan,
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
     worklayout: "home__works__item",
     layout: "content--layout-1",
   },
   {
-    title: "nishi",
-    image: nishiSplash,
+    title: "dodgers",
+    image: dodgers,
     titlePos: 'nishiTitPos',
     imagePos: 'nishiImgPos',
     worklayout: "home__works__item",
     layout: "content--layout-2",
   },
   {
-    title: "yippido",
-    image: yippido,
+    title: "nishi",
+    image: nishiSplash,
     titlePos: 'yipTitPos',
     imagePos: 'yipImgPos',
     worklayout: "home__works__item",

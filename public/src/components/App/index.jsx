@@ -30,5 +30,6 @@ const App = () => {
     </div>
   )
 };
+export default App;
 
-export default withSplashScreen(App);
+// export default withSplashScreen(App);
